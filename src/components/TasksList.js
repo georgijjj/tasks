@@ -1,7 +1,7 @@
 import React from 'react'
 import Task from './Task'
 import Button from '@material-ui/core/Button'
-import { RangeModal } from '../containers'
+import { RangeModal, Search } from '../containers'
 
 export default class TasksList extends React.Component {
   constructor() {
@@ -16,6 +16,7 @@ export default class TasksList extends React.Component {
     const { tasks, deleteTask } = this.props
     return (
       <React.Fragment>
+        <Search />
         <Button onClick={this._onCreateClick}>Добавить</Button>
         {tasks.map(task => (
           <Task
